@@ -1,8 +1,6 @@
-// import JSONAPIAdapter from 'ember-data/adapters/json-api';
-
-// export default JSONAPIAdapter.extend({
-// });
-
-import ActiveModelAdapter from 'active-model-adapter';
-  export default ActiveModelAdapter.extend({ namespace: 'api'
-});
+export default DS.RESTAdapter.extend({
+host: 'http://localhost:3000',
+namespace: 'api',
+headers: {
+    "Content-type": "x-www-form-urlencoded" // workaround for laravel
+}});
