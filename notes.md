@@ -19,3 +19,17 @@ The faster option from an API point of view would be to use links. This won’t 
 - or example, when using ids, Ember-Data will only load records from the server that are not yet available in the store. However, if some of the records are loaded, it won’t make that request. With links, you lose that benefit because Ember-Data doesn’t have any information. It will make the request and load data that you might already have available.
 - Computed properties and observers are normally fired whenever we call this.set() on the property they depend on. The downside of this is that they will be recalculated even if the value is the same.
 - Ember has a built-in implementation of the Observer pattern94, which allows us to keep track of changes in any property or computed property.
+- As we mentioned in the section on adapters, ember-cli allows us to group things that are logically related under a single directory. Such a structure is known as “pods”.
+
+- bucket public:
+{
+   }
+"Version": "2012-10-17",
+"Statement": [
+{
+} ]
+"Sid": "AddPerm",
+"Effect": "Allow",
+"Principal": "*",
+"Action": "s3:GetObject",
+"Resource": "arn:aws:s3:::REPLACE-WITH-REAL-BUCKET-NAME/*"
