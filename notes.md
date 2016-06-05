@@ -1,0 +1,3 @@
+- Edit and Show Route: return this.store.findRecord(‘modelName’, modelId) 
+- Create Route: return this.store.createRecord(‘modelName’, properties)
+- Index Route: return this.store.findAll(‘modelName’)

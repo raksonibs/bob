@@ -2,8 +2,11 @@
 <div class="card friend-profile"> <p>{{model.firstName}}</p>
 <p>{{model.lastName}}</p>
 <p>{{model.email}}</p>
-<p>{{model.twitter}}</p>
-<p>{{link-to "Edit info" "friends.edit" model}}</p> <p><a href="#" {{action "delete" model}}>delete</a></p>
+<p>{{model.twitter}}</p> 
+<p>{{link-to "Lend article" "articles.new"}}</p> 
+<p>{{link-to "Edit info" "friends.edit" model}}</p>
+<p><a href="#" {{action "delete" model}}>delete</a></p>
+{{!-- {{link-to “Lend articles” “articles.new” friend}}  in index where friend necessary, but because available in show relationship is aware --}}
 </div>
 <div class="articles-container">
 {{outlet}} </div>
