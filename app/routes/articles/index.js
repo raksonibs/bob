@@ -4,5 +4,11 @@ export default Ember.Route.extend({
   model() {
     // modelFor grabs model for any parent route. 
     return this.modelFor('friends/show').get('articles')
+  }, 
+  actions: {
+    save(model) {
+      model.save();
+      return false;
+    }
   }
 });

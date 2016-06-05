@@ -18,5 +18,10 @@ export default Ember.Route.extend({
     cancel() {
       this.transitionTo('articles')
     }
+  }, resetController(controller, isExiting) {
+    if (isExiting) {
+      var model = controller.get('model')
+      model.rollback()
+    }
   }
 })

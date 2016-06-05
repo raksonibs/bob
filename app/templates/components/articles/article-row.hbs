@@ -1,11 +1,9 @@
-<td>{{article.description}}</td> <td>{{article.notes}}</td> <td>{{article.createdAt}}</td> <td>
-{{#x-select value=article.state}} {{#each articleStates as |state|}}
+<td>{{article.description}}</td> <td>{{article.notes}}</td> <td>{{formatted-date article.createdAt 'LL'}}</td> <td>
+{{#x-select value=article.state action="saveArticle"}} {{#each articleStates as |state|}}
 {{#x-option value=state}}{{state}}{{/x-option}} {{/each}}
 {{/x-select}} </td>
 <td>
 {{#if article.isSaving}} <p>Saving ...</p>
-{{else if article.hasDirtyAttributes}}
-<button {{action "saveArticle" article}}>Save</button>
 {{/if}} </td>
 
 {{!-- article.hasDirtyAttributes becomes true if there is a change to the model and article.isSaving is true if the model tries to persist any changes to the backend. --}}
