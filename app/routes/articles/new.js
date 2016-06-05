@@ -2,7 +2,7 @@ import Ember from 'ember'
 
 export default Ember.Route.extend({
   model() {
-    rturn this.store.createRecord('article', {
+    return this.store.createRecord('article', {
       state: 'borrowed',
       friend: this.modelFor('friends/show')
     })
