@@ -17,4 +17,5 @@ Async helps us alleviate the issue when we have a lot of records. This can help 
 - 
 The faster option from an API point of view would be to use links. This won’t require the parent to know anything about its children, but then we lose other benefits.
 - or example, when using ids, Ember-Data will only load records from the server that are not yet available in the store. However, if some of the records are loaded, it won’t make that request. With links, you lose that benefit because Ember-Data doesn’t have any information. It will make the request and load data that you might already have available.
--
+- Computed properties and observers are normally fired whenever we call this.set() on the property they depend on. The downside of this is that they will be recalculated even if the value is the same.
+- Ember has a built-in implementation of the Observer pattern94, which allows us to keep track of changes in any property or computed property.

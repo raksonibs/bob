@@ -11,3 +11,6 @@ margin:1em 2em 1em 1em;
 }
 .friend-profile-links li { display: inline; list-style-type: none; padding-right: 20px;
 }
+
+.friends-table thead tr { cursor: pointer;
+}

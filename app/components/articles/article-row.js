@@ -13,4 +13,17 @@ export default Ember.Component.extend({
         }
       }
     }
+    // },
+    // stateChanged: Ember.observer('article.state', function() {
+    //   var article = this.get('article')
+    //   console.log("OMG change")
+    // })
+  //    setObserver: function() {
+  //   this.addObserver('article.state', this, this.stateChanged);
+  // }.on('init'),
+  // stateChanged() {
+  //   var article = this.get('article');
+  //   console.log('OMG Expensive operation because article state changed');
+  // },
+
 });
