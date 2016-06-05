@@ -5,11 +5,9 @@
 {{#each model as |friend|}}
 <li>
 
-  {{#link-to 'friends.show' friend}}
   {{!--  that if we pass an instance of a friend to link-to, then the model hook in the friends show route won’t be called. If we want the hook to be called, instead of doing {{#link-to 'friends.show' friend}}, we’ll have to do {{#link-to 'friends.show' friend.id}}. --}}
   {{!-- {{link-to friend.fullName 'friends.show' friend}} computed link content --}}
-    {{friend.fullName}}
-  {{/link-to}}
+  <td>{{link-to friend.fullName "articles" friend}}</td>
 
   <td><a href="#" {{action "delete" friend}}>Delete</a></td>
 
