@@ -43,8 +43,11 @@
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
     "emberx-select": "2.1.2",
+    "express": "^4.13.4",
+    "glob": "^4.5.3",
     "loader.js": "^4.0.1",
-    "moment": "^2.13.0"
+    "moment": "^2.13.0",
+    "morgan": "^1.7.0"
   },
   "dependencies": {
     "ember-cli-fill-murray-raksonibs": "^0.1.0"
