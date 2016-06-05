@@ -2,15 +2,20 @@
   <thead>
     <tr>
       <th>Description</th>
+      <th>Notes</th>
       <th>Borrowed since</th>
       <th></th>
       <th></th>
     </tr>
   </thead>
 <tbody>
-{{#each model as |article|}} <tr>
-<td>{{article.description}}</td> <td>{{article.createdAt}}</td> <td></td>
-<td></td>
-</tr>
-{{/each}} </tbody>
+{{#each model as |article|}} 
+{{!-- "save"  will send save to the article, can soon write <articles/article-row>--}}
+{{articles/article-row
+        article=article
+        save="save"
+        articleStates=possibleStates
+}} 
+{{/each}}
+  </tbody>
 </table>
