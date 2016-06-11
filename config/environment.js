@@ -4,7 +4,6 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'borrowers',
     environment: environment,
-    host: "localhost:3000",
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
