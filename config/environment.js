@@ -6,12 +6,19 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
-    contentSecurityPolicy: {
-        'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com"
+    
+    firebase: {
+      apiKey: 'AIzaSyB_CUQBckWiCBTn9XhOezkxJ4ukGIQOLLs',
+      authDomain: 'emberfire1.firebaseapp.com',
+      databaseURL: 'https://emberfire1.firebaseio.com',
+      storageBucket: 'emberfire1.appspot.com',
     },
-    firebase: 'https://emberfire1.firebaseio.com/',
-    baseURL: '/',
-    locationType: 'auto',
+    // if using ember-cli-content-security-policy
+    contentSecurityPolicy: {
+      'script-src': '\'self\' \'unsafe-eval\' apis.google.com',
+      'frame-src': '\'self\' https://*.firebaseapp.com',
+      'connect-src': '\'self\' wss://*.firebaseio.com https://*.googleapis.com'
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
