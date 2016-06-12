@@ -1,0 +1,1 @@
+* ember script which runs with socket.io constantly pegging api to check for new articles
