@@ -41,7 +41,8 @@
     "ember-resolver": "^2.0.3",
     "ember-websockets": "4.0.0",
     "emberfire": "git://github.com/firebase/emberfire.git#fdcd8b04474d774d4337680e4b3bf8329bd0dd9d",
-    "loader.js": "^4.0.1"
+    "loader.js": "^4.0.1",
+    "socket.io": "1.4.6"
   },
   "dependencies": {
     "firebase": "^3.0.4"

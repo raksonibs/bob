@@ -8,6 +8,7 @@
     "bootstrap-sass": "^3.3.6",
     "firebase": "^3.0.0",
     "jqvmap": "^1.5.1",
-    "uri.js": "^1.18.1"
+    "uri.js": "^1.18.1",
+    "socket.io-client": "^1.4.6"
   }
 }
