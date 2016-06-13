@@ -1,63 +1,53 @@
 import Ember from 'ember';
 
-const { get, inject } = Ember;
-
 export default Ember.Component.extend({
 
   /*
-  * 1) First step you need to do is inject the websockets service into your object.
+  * 1) First step you need to do is inject the socketio service into your object.
   */
-  websockets: inject.service(),
-  socketRef: null,
+  socketIOService: Ember.inject.service('socket-io'),
 
   willRender() {
     /*
-    * 2) The next step you need to do is to create your actual websocket. Calling socketFor
-    * will retrieve a cached websocket if one exists or in this case it
-    * will create a new one for us.
+    * 2) The next step you need to do is to create your actual socketIO.
     */
-    const socket = get(this, 'websockets').socketFor('ws://localhost:7000/');
+    const socket = this.get('socketIOService').socketFor('http://localhost:3001/');
 
     /*
-    * 3) The next step is to define your event handlers. All event handlers
-    * are added via the `on` method and take 3 arguments: event name, callback
-    * function, and the context in which to invoke the callback. All 3 arguments
-    * are required.
+    * 3) Define any event handlers
     */
-    socket.on('open', this.myOpenHandler, this);
-    socket.on('message', this.myMessageHandler, this);
-    socket.on('close', this.myCloseHandler, this);
+    socket.on('connect', this.onConnect, this);
+    socket.on('message', this.onMessage, this);
 
-    this.set('socketRef', socket);
+    /*
+    * 4) It is also possible to set event handlers on specific events
+    */
+    socket.on('myCustomNamespace', () => { socket.emit('anotherNamespace', 'some data'); });
+  },
+
+  onConnect() {
+    const socket = this.get('socketIOService').socketFor('http://localhost:3001/');
+
+    /*
+    * There are 2 ways to send messages to the server: send and emit
+    */
+    socket.send('Hello World');
+    socket.emit('Hello server');
+  },
+
+  onMessage(data) {
+    // This is executed within the ember run loop
+  },
+
+  myCustomNamespace(data) {
+    const socket = this.get('socketIOService').socketFor('http://localhost:3001/');
+    socket.emit('anotherNamespace', 'some data');
   },
 
   willDestroyElement() {
-    const socket = this.get('socketRef');
-
-    /*
-    * 4) The final step is to remove all of the listeners you have setup.
-    */
-    socket.off('open', this.myOpenHandler);
-    socket.off('message', this.myMessageHandler);
-    socket.off('close', this.myCloseHandler);
-  },
-
-  myOpenHandler(event) {
-    console.log(`On open event has been called: ${event}`);
-  },
-
-  myMessageHandler(event) {
-    console.log(`Message: ${event.data}`);
-  },
-
-  myCloseHandler(event) {
-    console.log(`On close event has been called: ${event}`);
-  },
-
-  actions: {
-    sendButtonPressed() {
-      const socket = this.get('socketRef');
-      socket.send('Hello Websocket World');
-    }
+    const socket = this.get('socketService').socketFor('http://localhost:3001/');
+    socket.off('connect', this.onConnect);
+    socket.off('message', this.onMessage);
+    socket.off('myCustomNamespace', this.myCustomNamespace);
   }
 });
