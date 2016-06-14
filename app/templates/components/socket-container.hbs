@@ -1,5 +1,8 @@
-Welcome Chat!<br><br>
-
+{{#if newMessages}}
+  <p>
+    NEW MESSAGE!
+  </p>
+{{/if}}
 Received Message: {{message}}<br>  
 <button id="sendButtonPressed" {{action "sendButtonPressed"}}>Press Me</button>
 {{yield}}

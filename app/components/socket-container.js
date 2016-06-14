@@ -39,6 +39,7 @@ export default Ember.Component.extend({
   onMessage(data) {
     // This is executed within the ember run loop
     console.log(data)
+    this.set('newMessages', true)
   },
 
   myCustomNamespace(data) {
