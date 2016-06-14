@@ -18,6 +18,7 @@ export default Ember.Component.extend({
     */
     socket.on('connect', this.onConnect, this);
     socket.on('message', this.onMessage, this);
+    socket.on('time', this.onMessage, this);
 
     /*
     * 4) It is also possible to set event handlers on specific events
@@ -37,6 +38,7 @@ export default Ember.Component.extend({
 
   onMessage(data) {
     // This is executed within the ember run loop
+    console.log(data)
   },
 
   myCustomNamespace(data) {

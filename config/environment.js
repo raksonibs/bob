@@ -19,6 +19,7 @@ module.exports = function(environment) {
       'frame-src': '\'self\' https://*.firebaseapp.com  ws://localhost:3001 localhost:3001"',
       'connect-src': '\'self\' wss://*.firebaseio.com https://*.googleapis.com ws://localhost:3001 localhost:3001"'
     },
+    host: 'http://localhost:3000',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
