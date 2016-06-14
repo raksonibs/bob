@@ -39,6 +39,11 @@ export default Ember.Component.extend({
   onMessage(data) {
     // This is executed within the ember run loop
     console.log(data)
+    let thisState = this
+    setTimeout(function() {      
+      thisState.set('newMessages', false)  
+    }, 5000)
+    this.set('newMessagesArray', data.data)
     this.set('newMessages', true)
   },
 

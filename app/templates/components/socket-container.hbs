@@ -2,6 +2,9 @@
   <p>
     NEW MESSAGE!
   </p>
+  {{#each newMessagesArray as |newArticle|}}
+    <p>{{newArticle.attributes.title}}</p>
+  {{/each}}
 {{/if}}
 Received Message: {{message}}<br>  
 <button id="sendButtonPressed" {{action "sendButtonPressed"}}>Press Me</button>
