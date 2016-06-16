@@ -3,3 +3,21 @@
 body {
   padding-top: 20px;
 }
+
+.shape {
+  width: 400px;
+  height: 400px;
+  display: inline-block;
+
+  &.red {
+    background: red;
+  }
+
+  &.blue {
+    background: blue;
+  }
+
+  &.circle {
+    border-radius: 50%;
+  }
+}
