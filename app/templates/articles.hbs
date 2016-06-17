@@ -6,17 +6,7 @@
     {{world-articles total=totalWorld}}
     {{us-articles total=totalUSA}}
 
-    {{!-- {{socket-container}} --}}
+    {{socket-container articles=articles usaArticles=usaArticles}}
 
     <br/><br/>
-
-    <h1>World articles</h1>
-    {{#each articles as |article|}}
-      {{article-notice article=article}}
-    {{/each}}
-    <br/><br/>
-    <h1> USA Articles </h1>
-    {{#each usaArticles as |article|}}
-      {{article-notice article=article}}
-    {{/each}}
 </div>

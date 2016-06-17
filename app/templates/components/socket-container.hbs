@@ -1,3 +1,9 @@
+<ul class="errors">
+  {{#each errors as |error|}}
+    <li>{{error.message}}</li>
+  {{/each}}
+</ul>
+
 {{#if newMessages}}
   <p>
     NEW MESSAGE!
@@ -9,3 +15,13 @@
 Received Message: {{message}}<br>  
 <button id="sendButtonPressed" {{action "sendButtonPressed"}}>Press Me</button>
 {{yield}}
+
+<h1>World articles</h1>
+{{#each articles as |article|}}
+  {{article-notice article=article}}
+{{/each}}
+<br/><br/>
+<h1> USA Articles </h1>
+{{#each usaArticles as |article|}}
+  {{article-notice article=article}}
+{{/each}}

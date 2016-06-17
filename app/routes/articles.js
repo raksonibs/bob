@@ -25,7 +25,7 @@ export default Ember.Route.extend({
     controller.set('usaArticles', models.usaArticles);
     controller.set('total', models.usaArticles.toArray().length + models.articles.toArray().length)
     controller.set('totalUSA', models.usaArticles.toArray().length)
-    controller.set('totalWorld', models.articles.toArray().length)
+    controller.set('totalWorld', models.articles.toArray().length - models.usaArticles.toArray().length)
     // or, more concisely:
     // controller.setProperties(models);
   },
