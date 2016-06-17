@@ -1,7 +1,20 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return this.store.findAll('article');
+  queryParams: {
+    limit: {
+      refreshModel: true
+    }
   },
+
+  model(params) {
+    return this.store.findAll('article', params);
+  },
+
+  actions: {
+
+    showAll() {
+      this.transitionTo({ queryParams: { limit: total }}); // total?
+    },
+  }
 });

@@ -1,5 +1,18 @@
-{{#each model as |article|}}
-  {{article-notice article=article}}
-{{/each}}
+<div class="jumbotron text-center">
+    <h1>Coming Soon</h1>
 
-{{render "index"}}
+    <br/><br/>
+
+    {{!-- {{world-map}} --}}
+    {{world-articles}}
+    {{us-articles}}
+
+    {{socket-container}}
+
+    <br/><br/>
+
+    <h1>current articles</h1>
+    {{#each model as |article|}}
+      {{article-notice article=article}}
+    {{/each}}
+</div>
