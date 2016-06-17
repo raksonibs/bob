@@ -13,6 +13,7 @@ module.exports = function(defaults) {
   // app.import('bower_components/jqvmap/dist/jquery.min.css');
   app.import('bower_components/jqvmap/dist/jquery.vmap.min.js');
   app.import('bower_components/jqvmap/dist/maps/jquery.vmap.world.js');
-
+  app.import('vendor/gmaps.js');
+  
   return app.toTree();
 };
