@@ -16,9 +16,9 @@ export default Ember.Component.extend({
     /*
     * 3) Define any event handlers
     */
-    socket.on('connect', this.onConnect, this);
-    socket.on('message', this.onMessage, this);
-    socket.on('time', this.onMessage, this);
+    // socket.on('connect', this.onConnect, this);
+    // socket.on('message', this.onMessage, this);
+    // socket.on('time', this.onMessage, this);
 
     /*
     * 4) It is also possible to set event handlers on specific events

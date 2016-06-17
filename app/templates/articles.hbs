@@ -12,6 +12,9 @@
     <br/><br/>
 
     <h1>current articles</h1>
+    {{#if showAll}}
+      <button {{action 'showAll'}}>Show All</button>
+    {{/if}}
     {{#each model as |article|}}
       {{article-notice article=article}}
     {{/each}}
