@@ -11,6 +11,17 @@ export default Ember.Route.extend({
     return this.store.findAll('article', params);
   },
 
+  afterModel(model) {
+
+  },
+
+  setupController(controller, model) {
+    controller.set('articles', model)
+    this.store.query('article', { section: { name: 'U.S.' } }).then(function(usaArticles) {
+      controller.set('usaArticles', usaArticles)
+    })
+  }
+
   actions: {
 
     showAll() {

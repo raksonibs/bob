@@ -7,15 +7,17 @@
     {{world-articles}}
     {{us-articles}}
 
-    {{socket-container}}
+    {{!-- {{socket-container}} --}}
 
     <br/><br/>
 
-    <h1>current articles</h1>
-    {{#if showAll}}
-      <button {{action 'showAll'}}>Show All</button>
-    {{/if}}
+    <h1>World articles</h1>
     {{#each model as |article|}}
+      {{article-notice article=article}}
+    {{/each}}
+    <br/><br/>
+    <h1> USA Articles </h1>
+    {{#each usaArticles as |article|}}
       {{article-notice article=article}}
     {{/each}}
 </div>
