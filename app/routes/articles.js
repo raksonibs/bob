@@ -7,20 +7,25 @@ export default Ember.Route.extend({
     }
   },
 
-  model(params) {
-    return this.store.findAll('article', params);
+  model() {
+    return Ember.RSVP.hash({
+      articles: this.store.findAll('article'),
+      usaArticles: this.store.query('article', {section: 'U.S.'})
+      // category: this.store.findAll('category'),
+      // weather: this.get('weather').current()
+    });
   },
 
-  afterModel(model) {
-
+  setupController(controller, models) {
+    // controller.set('articles', model)
+    // this.store.query('article', { section: { name: 'U.S.' } }).then(function(usaArticles) {
+    //   controller.set('usaArticles', usaArticles)
+    // })
+    controller.set('articles', models.articles);
+    controller.set('usaArticles', models.usaArticles);
+    // or, more concisely:
+    // controller.setProperties(models);
   },
-
-  setupController(controller, model) {
-    controller.set('articles', model)
-    this.store.query('article', { section: { name: 'U.S.' } }).then(function(usaArticles) {
-      controller.set('usaArticles', usaArticles)
-    })
-  }
 
   actions: {
 
