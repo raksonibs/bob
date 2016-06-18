@@ -15,6 +15,8 @@ Router.map(function() {
     this.route('invitations');
   });
 
+  this.route('login')
+
   this.route('articles', { path: '/' });
 });
 

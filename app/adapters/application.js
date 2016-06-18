@@ -14,12 +14,15 @@
 //   }
 // });
 
+import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
+
 import JSONAPIAdapter from 'ember-data/adapters/json-api';
 import Ember from 'ember';
 
-export default JSONAPIAdapter.extend({
+export default JSONAPIAdapter.extend(DataAdapterMixin, {
   host: 'http://localhost:3000',
   namespace: 'api',
+  authorizer: 'authorizer:oauth2',
   pathForType: function(type) {
     return Ember.String.pluralize(Ember.String.underscore(type));
   },

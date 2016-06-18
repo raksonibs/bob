@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  session: Ember.inject.service('session'),
+
   queryParams: {
     limit: {
       refreshModel: true
@@ -31,10 +33,23 @@ export default Ember.Route.extend({
   },
 
   actions: {
-
     showAll() {
       const total = this.controllerFor('articles').get('total')
       this.transitionTo({ queryParams: { limit: total }}); // total?
+    },
+    invalidateSession() {
+      this.get('session').invalidate()
+    },
+    authenticate() {
+      // let { identification, password } = this.getProperties('identification', 'password');
+      // this.get('session').authenticate('authenticator:oauth2', identification, password).catch((reason) => {
+      //   this.set('errorMessage', reason.error || reason);
+      // });
+      this.get('session').authorize('authorizer:oauth2', (headerName, headerValue) => {
+        const headers = {};
+        headers[headerName] = headerValue;
+        Ember.$.ajax('/secret-data', { headers });
+      });
     }
   }
 });
