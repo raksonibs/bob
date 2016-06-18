@@ -41,14 +41,11 @@ export default Ember.Route.extend({
       this.get('session').invalidate()
     },
     authenticate() {
-      // let { identification, password } = this.getProperties('identification', 'password');
-      // this.get('session').authenticate('authenticator:oauth2', identification, password).catch((reason) => {
-      //   this.set('errorMessage', reason.error || reason);
-      // });
-      this.get('session').authorize('authorizer:oauth2', (headerName, headerValue) => {
-        const headers = {};
-        headers[headerName] = headerValue;
-        Ember.$.ajax('/secret-data', { headers });
+      const { login, password } = this.getProperties('login', 'password');
+      this.get('session').authenticate('authenticator:oauth2', login, password).then(() => {
+        alert('Success! Click the top link!');
+      }, (err) => {
+        alert('Error obtaining token: ' + err.responseText);
       });
     }
   }
