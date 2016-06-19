@@ -1,8 +1,9 @@
-<p>{{#if authManager.currentUser}}
-  Logged in as {{authManager.currentUser.email}}
-  <br />
+{{#md-navbar homeRoute="articles" name="Example" class="ingigo"}}
+{{#if authManager.currentUser}}
+  <a>Logged in as {{authManager.currentUser.email}}
+  </a>
    <a {{action 'invalidateSession'}}>Logout</a>
 {{else}}
   Not logged in
 {{/if}}
-</p>
+{{/md-navbar}}
