@@ -9,7 +9,8 @@ Router.map(function() {
   this.route('users');
   this.route('locations');
   this.route('favourites');
-  this.route('articles');
+  this.route('articles', { path: '/' });
+  this.route('login');
 });
 
 export default Router;
