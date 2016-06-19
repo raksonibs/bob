@@ -1,0 +1,8 @@
+<p>{{#if authManager.currentUser}}
+  Logged in as {{authManager.currentUser.email}}
+  <br />
+   <a {{action 'invalidateSession'}}>Logout</a>
+{{else}}
+  Not logged in
+{{/if}}
+</p>
