@@ -12,16 +12,13 @@
 
     <div class="collapse navbar-collapse" id="main-navbar">
       <ul class="nav navbar-nav">
-            {{#link-to 'index' tagName="li"}}<a href>Home</a>{{/link-to}}
-            {{#link-to 'about' tagName="li"}}<a href>About</a>{{/link-to}}
-             {{#link-to 'chat' tagName="li"}}<a href>chat</a>{{/link-to}}
+            {{#link-to 'index' tagName="li"}}<a href>Home</a>{{/link-to}}       
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                  {{#link-to 'admin.invitations' tagName="li"}}<a href="">Invitations</a>{{/link-to}}
               </ul>
           </li>
       </ul>

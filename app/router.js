@@ -6,18 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('about');
-
-  this.route('chat')
-  this.route('index')
-
-  this.route('admin', function() {
-    this.route('invitations');
-  });
-
-  this.route('login')
-
-  this.route('articles', { path: '/' });
+  this.route('admin')
 });
 
 export default Router;

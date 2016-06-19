@@ -1,9 +1,4 @@
 <div class="container">
   {{partial 'navbar'}}
-  {{#if session.isAuthenticated}}
-    <a {{action 'invalidateSession'}}>Logout</a>
-  {{else}}
-    {{partial 'login'}}
-  {{/if}}
   {{outlet}}
 </div>
