@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('locations');
   this.route('favourites');
   this.route('articles', { path: '/' });
+  this.route('articles');
   this.route('login');
 });
 
