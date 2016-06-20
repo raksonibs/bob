@@ -5,25 +5,26 @@
          viewBox="0 0 1000 504" style="enable-background:new 0 0 1000 504;" xml:space="preserve">
       <g id="world_border">
         <!-- ANTARCTICA STARTS -->
-        <foreignObject>{{antartica-map}}</foreignObject>
+        {{antartica-map articleCount=antCount.length}}  
         <!-- ANTARCTICA ENDS -->
         <!-- SOUTH AMERICA STARTS  -->
-        <foreignObject>{{samerica-map}}</foreignObject>
+        {{samerica-map articleCount=samCount.length}}  
         <!-- SOUTH AMERICA ENDS -->
         <!-- OCEANIA STARTS -->
-        <foreignObject>{{oceania-map}}</foreignObject>
+        {{oceania-map articleCount=oceCount.length}}
         <!-- OCEANIA ENDS -->
         <!-- NORTH AMERICA STARTS -->
-        <foreignObject>{{namerica-map}}</foreignObject>
+        {{namerica-map articleCount=namCount.length}}
         <!-- NORTH AMERICA ENDS -->
         <!-- EUROPE STARTS -->
-        <foreignObject>{{europe-map}}</foreignObject>
+        {{europe-map articleCount=eurCount.length}}
         <!-- EUROPE ENDS -->
         <!-- ASIA STARTS -->
-        <foreignObject>{{asia-map}}</foreignObject>
+        {{asia-map articleCount=asiaCount.length}}
         <!-- ASIA ENDS -->
         <!-- AFRICA STARTS -->
-        <foreignObject>{{africa-map}}</foreignObject>
+        {{africa-map articleCount=afrCount.length}}
+        
         <!-- AFRICA ENDS -->
       </g>
     </svg>    

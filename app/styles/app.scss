@@ -182,3 +182,12 @@ $time: 1s;
     opacity: 1;
   }
 }
+
+#Asia, #NorthAmerica, #SouthAmerica, #Oceania, #Antarctica, #Africa, #Europe {
+  @include transition ($time);
+
+  &:hover {
+    opacity: 1;
+    fill: $selected;
+  }
+}
