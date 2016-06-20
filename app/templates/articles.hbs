@@ -1,6 +1,8 @@
 <ul>
 {{#each model as |article|}}
-  {{article-row article=article}}
-  {{favourite-btn favouriteBtnClick=(route-action "favouriteBtnClick") article=article}}
+  <li>
+    {{article-row blurBackground=(route-action "blurBackground") article=article}}
+    {{favourite-btn favouriteBtnClick=(route-action "favouriteBtnClick") article=article}}
+  </li>
 {{/each}}
 </ul>

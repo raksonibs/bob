@@ -1,6 +1,8 @@
 
 {{nav-bar}}
+<div class="{{if blur 'blur-background' ''}}">
 {{outlet}}
+</div>
 
 {{!-- ember-cli-materialize modal container --}}
 {{md-modal-container}}

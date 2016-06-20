@@ -8,6 +8,10 @@ export default Ember.Route.extend({
   },
 
   actions: {
+    blurBackground(blur) {
+      this.set('isModalOpen', blur);
+      this.set('blur', blur);
+    },
     favouriteBtnClick(article) {
       if (this.get('authManager').get('isAuthenticated')) {
         let user = this.store.peekRecord('user', this.get('authManager').get('session.content.authenticated.user').id)
@@ -18,6 +22,10 @@ export default Ember.Route.extend({
  
         favourite.save()
       }
+    }, 
+    close() {
+      this.set('isModalOpen', false);
+      this.set('blur', false);
     }
   }
 });

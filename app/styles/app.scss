@@ -19,15 +19,33 @@ ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  
+  display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   /* You can set flex-wrap and flex-direction individually */
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   /* Or do it all in one line with flex flow */
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   /* tweak the where items line up on the row */
+   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+   -webkit-align-content: flex-end;
+   align-content: flex-end;
 }
 
 ul div {
-  display: inline-block;
-  vertical-align: top;
-  height: 250px;
-  width: 200px;
-  text-align: center;
-  padding: 0 1em 3em;
+  // display: inline-block;
+  // vertical-align: top;
+  // height: 250px;
+  // text-align: center;
+  // padding: 0 1em 3em;
 }
 
 ul li {
@@ -36,6 +54,8 @@ ul li {
   background: #E9E9E9;
   height: 90%;
   cursor: pointer;
+  width: 30%;
+  margin: 15px 7.5px 0 7.5px;
 }
 
 a {
@@ -48,30 +68,30 @@ a.author {
   color: #111;
 }
 
-// .modal {
-//   width: 20em;
-//   height: 15em;
-//   position: fixed;
-//   top: 50%;
-//   left: 50%;
-//   margin-top: -7.5em;
-//   margin-left: -10em;
-//   padding: 1em;
-//   background-color: #f1c40f;
-//   border-radius: 5px;
-//   text-align: center;
-//   z-index: 11; /* 1px higher than the overlay layer */
-//   opacity: 1 !important;
-//   -webkit-border-radius: 4px;
-//   -moz-border-radius: 4px;
-//   border-radius: 4px;
-//   -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.28);
-//   -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.28);
-//   box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.28);
-//   -webkit-transition: opacity 400ms ease-in;
-//   -moz-transition: opacity 400ms ease-in;
-//   transition: opacity 400ms ease-in;
-// }
+.modal {
+  width: 20em;
+  height: 15em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -7.5em;
+  margin-left: -10em;
+  padding: 1em;
+  background-color: #f1c40f;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 11; /* 1px higher than the overlay layer */
+  opacity: 1 !important;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.28);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.28);
+  box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.28);
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
 
 .blur-background {
   z-index: -999;
