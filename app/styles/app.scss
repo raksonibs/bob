@@ -106,3 +106,79 @@ a.author {
 
 // ember-cli-materialize styles
 @import 'ember-cli-materialize';
+
+
+#world-map {
+  margin: 25px 0;
+}
+
+/* Sass variables & mixins */
+$back: #eee;
+$selected: #0066FF;
+$not-selected: #818A97;
+$font: Play, sans-serif;
+$time: 1s;
+
+@mixin transition($tTime) {
+  transition: all $tTime ease;
+}
+
+/* ************************ */
+/* container styling */
+#wrapper {
+  // background: $back;
+  // padding: 20px 0 40px;
+}
+
+#map-container {
+  margin: 0 auto; 
+  // width: 50%;
+  position: relative; 
+  font-family: $font;
+  text-align: center;
+  color: $selected;
+  
+  a {
+    display: block;
+    text-decoration: none;
+    color: $selected;
+    &:hover {
+      opacity: .5;
+      @include transition($time);
+    }
+    &:visited {
+      color: $selected;
+    } 
+  }
+}
+
+/* ************************ */
+/* caption styling */
+#map-caption {
+  @include transition($time);
+  
+  width: 100%;
+  position: absolute;
+  bottom: 80px;
+  margin: 0 auto; 
+  text-shadow: -1px 1px 8px $back, 1px -1px 8px $back;
+}
+
+/* caption fade in / out */
+.fade { @include transition ($time); }
+.in { opacity: 1; }
+.out { opacity: 0; }
+
+/* ************************ */
+/* countries styling */
+// .st0 { fill: $not-selected; }
+.st1, .st0 {
+  @include transition ($time);
+  
+  // fill: $selected;
+  opacity: .8;
+  
+  &:hover {
+    opacity: 1;
+  }
+}
