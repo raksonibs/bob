@@ -1,10 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: '',
   actions: {
-    showArts() {
-      this.get('activateContModal')(this.get('articles'))
+    activateContModal(articles) {
+      this.get('activateContModal')(articles)
     }
   }
 });
