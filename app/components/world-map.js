@@ -22,5 +22,11 @@ export default Ember.Component.extend({
   }),
   oceCount: Ember.computed(function() {
     return this.get('store').query('location', { continent: "Oceania"})
-  })
+  }),
+
+  actions: {
+    activateContModal(articles) {
+      this.get('activateContModal')(articles)
+    }
+  }
 });
