@@ -49,6 +49,11 @@
     "ember-route-action-helper": "0.3.2",
     "ember-simple-auth": "1.1.0",
     "ember-truth-helpers": "1.2.0",
-    "loader.js": "^4.0.1"
+    "ember-websockets": "4.0.1",
+    "loader.js": "^4.0.1",
+    "mock-socket": "3.0.1"
+  },
+  "dependencies": {
+    "socket.io": "^1.4.6"
   }
 }
