@@ -6,7 +6,7 @@
           <h5> Recent Articles: </h5>
           <ul>
             {{#each articles as |article|}}
-              <li><a>{{article.title}}</a></li>
+              <li>{{#link-to "articles.show" article}}{{article.title}}{{/link-to}}</li>
             {{/each}}
           </ul>
       </div>

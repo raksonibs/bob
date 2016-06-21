@@ -1,0 +1,11 @@
+<ul>
+  <li class="full-article">
+    <h1>{{model.title}}</h1>
+    <h2><em>{{model.created_at}}</em></h2>
+    <p> Favourited: {{model.favourites.length}} times</p>
+    <p>{{model.story}}</p>
+    <p>
+      {{model.location.address}} - {{model.location.country}} - {{model.location.continent}}
+    </p>
+  </li>
+</ul>

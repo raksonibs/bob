@@ -44,14 +44,6 @@ ul, .activate-modals {
    align-content: flex-end;
 }
 
-ul div {
-  // display: inline-block;
-  // vertical-align: top;
-  // height: 250px;
-  // text-align: center;
-  // padding: 0 1em 3em;
-}
-
 ul li {
   padding: 1em;
   border: 6px solid #AFAFAF;
@@ -60,6 +52,11 @@ ul li {
   cursor: pointer;
   width: 30%;
   margin: 15px 7.5px 0 7.5px;
+
+  &.full-article {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 a {

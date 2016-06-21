@@ -10,8 +10,9 @@ Router.map(function() {
   this.route('locations');
   this.route('favourites');
   this.route('articles', { path: '/' });
-  this.route('articles');
+  this.route('articles.show', { path: 'articles/:article_id'});
   this.route('login');
+  this.route('page-not-found', { path: '/*wildcard' });
 });
 
 export default Router;
