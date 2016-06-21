@@ -6,6 +6,6 @@ export default Ember.Route.extend({
     return this.store.findRecord('article', params.article_id)
   },
   afterModel() {
-    this.get('socketio').willRender()
+    this.get('socketio').setUp()
   }
 });

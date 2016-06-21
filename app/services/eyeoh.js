@@ -8,8 +8,7 @@ export default SocketIO.extend({
   
     const socket = this.get('socketIOService').socketFor('http://localhost:3001/');
     socket.on('connect', this.onConnect, this);
-    socket.on('message', this.onMessage, this);
-    socket.on('myCustomNamespace', () => { socket.emit('anotherNamespace', 'some data'); });
+    socket.on('message', this.onMessage, this);    
   },
 
   onConnect() {
@@ -19,7 +18,20 @@ export default SocketIO.extend({
   },
 
   onMessage(data) {
-    
+    const socket = this.get('socketIOService').socketFor('http://localhost:3001/');
+    socket.send('new message recieved on client: ' + data);
+  },
+
+  onNewArticles(data) {
+    const socket = this.get('socketIOService').socketFor('http://localhost:3001/');
+    socket.send('new articles recieved on client: ' + data.data.length);
+    return data.data
+  },
+
+  addNewArtListener() {
+    const socket = this.get('socketIOService').socketFor('http://localhost:3001/');
+    socket.send('Connecting to new articles');
+    socket.on('new_articles', this.onNewArticles, this);
   },
 
   myCustomNamespace(data) {

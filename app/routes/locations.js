@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  socketio: Ember.inject.service('eyeoh'),
   model() {
     return Ember.RSVP.hash({
         // locations: this.store.findAll('location'),
@@ -28,5 +29,9 @@ export default Ember.Route.extend({
       this.set('isModalOpen', false)
       this.set('blurBackground', false)
     }
+  },
+  afterModel() {
+    this.get('socketio').setUp()
+    this.get('socketio').addNewArtListener()
   }
 });
