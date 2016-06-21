@@ -3,25 +3,25 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   store: Ember.inject.service(),
   antCount: Ember.computed(function() {
-    return this.get('store').query('location', { continent: "Antartica"})
+    return this.get('store').query('article', { continent: "Antartica"})
   }),
   namCount: Ember.computed(function() {
-    return this.get('store').query('location', { continent: "North America"})
+    return this.get('store').query('article', { continent: "North America"})
   }),
   samCount: Ember.computed(function() {
-    return this.get('store').query('location', { continent: "South America"})
+    return this.get('store').query('article', { continent: "South America"})
   }),
   asiaCount: Ember.computed(function() {
-    return this.get('store').query('location', { continent: "Asia"})
+    return this.get('store').query('article', { continent: "Asia"})
   }),
   afrCount: Ember.computed(function() {
-    return this.get('store').query('location', { continent: "Africa"})
+    return this.get('store').query('article', { continent: "Africa"})
   }),
   eurCount: Ember.computed(function() {
-    return this.get('store').query('location', { continent: "Europe"})
+    return this.get('store').query('article', { continent: "Europe"})
   }),
   oceCount: Ember.computed(function() {
-    return this.get('store').query('location', { continent: "Oceania"})
+    return this.get('store').query('article', { continent: "Oceania"})
   }),
 
   actions: {

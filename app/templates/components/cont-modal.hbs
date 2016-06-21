@@ -1,4 +1,19 @@
-<div class="test">YOYOYOYO</div>
 {{#if isModalOpen}}
-  <div class="test">YOYOYOYO</div>
+  {{#md-modal close='close' class="article-modal"}}
+      <div class="modal-content">
+          <h4>Hello {{contTitle}}!</h4>
+          
+          <h5> Recent Articles: </h5>
+          <ul>
+            {{#each articles as |article|}}
+              <li><a>{{article.title}}</a></li>
+            {{/each}}
+          </ul>
+      </div>
+      <div class="modal-footer">
+          <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'close'}}>
+              Cancel
+          </a>
+      </div>
+    {{/md-modal}}
 {{/if}}

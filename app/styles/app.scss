@@ -15,6 +15,10 @@ body {
   margin-left: 2em;
 }
 
+.modal.show {
+  height: 600px;
+}
+
 ul, .activate-modals {
   margin: 0;
   padding: 0;

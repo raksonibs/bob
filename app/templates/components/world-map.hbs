@@ -1,31 +1,28 @@
-{{cont-modal contTitle="Africa" isModalOpen=isModalOpen}}
-
 <div id="wrapper">
   <div id="map-container">    
     <svg version="1.1" id="world-map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 1000 504" style="enable-background:new 0 0 1000 504;" xml:space="preserve">
       <g id="world_border">
         <!-- ANTARCTICA STARTS -->
-        {{antartica-map articleCount=antCount.length}}  
+        {{antartica-map articles=antArticles activateContModal=activateContModal articleCount=antCount.length}}
         <!-- ANTARCTICA ENDS -->
         <!-- SOUTH AMERICA STARTS  -->
-        {{samerica-map articleCount=samCount.length}}  
+        {{samerica-map articles=samArticles activateContModal=activateContModal articleCount=samCount.length}}
         <!-- SOUTH AMERICA ENDS -->
         <!-- OCEANIA STARTS -->
-        {{oceania-map articleCount=oceCount.length}}
+        {{oceania-map articles=oceArticles activateContModal=activateContModal articleCount=oceCount.length}}
         <!-- OCEANIA ENDS -->
         <!-- NORTH AMERICA STARTS -->
-        {{namerica-map articleCount=namCount.length}}
+        {{namerica-map articles=namArticles activateContModal=activateContModal articleCount=namCount.length}}
         <!-- NORTH AMERICA ENDS -->
         <!-- EUROPE STARTS -->
-        {{europe-map articleCount=eurCount.length}}
+        {{europe-map articles=eurArticles activateContModal=activateContModal articleCount=eurCount.length}}
         <!-- EUROPE ENDS -->
         <!-- ASIA STARTS -->
-        {{asia-map articleCount=asiaCount.length}}
+        {{asia-map articles=asiaArticles activateContModal=activateContModal articleCount=asiaCount.length}}
         <!-- ASIA ENDS -->
         <!-- AFRICA STARTS -->
-        {{africa-map articles=afrCount activateContModal=activateContModal articleCount=afrCount.length}}
-        
+        {{africa-map articles=afrArticles activateContModal=activateContModal articleCount=afrCount.length}}å      
         <!-- AFRICA ENDS -->
       </g>
     </svg>    
