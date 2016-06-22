@@ -29,9 +29,5 @@ export default Ember.Route.extend({
       this.set('isModalOpen', false)
       this.set('blurBackground', false)
     }
-  },
-  afterModel() {
-    this.get('socketio').setUp()
-    this.get('socketio').addNewArtListener()
   }
 });

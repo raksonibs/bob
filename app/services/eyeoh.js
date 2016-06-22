@@ -3,6 +3,7 @@ import SocketIO from 'ember-websockets/services/socket-io'
 
 export default SocketIO.extend({
   socketIOService: Ember.inject.service('socket-io'),
+  data: [],
 
   setUp() {
   
@@ -25,7 +26,7 @@ export default SocketIO.extend({
   onNewArticles(data) {
     const socket = this.get('socketIOService').socketFor('http://localhost:3001/');
     socket.send('new articles recieved on client: ' + data.data.length);
-    return data.data
+    this.set('data', data);
   },
 
   addNewArtListener() {

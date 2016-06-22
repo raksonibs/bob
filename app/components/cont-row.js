@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    getArts() {
-      
+    showArts(articles) {
+      this.get('activateContModal')(articles)
     }
   }
 });
