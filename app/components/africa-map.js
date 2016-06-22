@@ -12,6 +12,9 @@ export default Ember.Component.extend({
       this.get('activateContModal')(this.get('articles'))
     }
   },
+  hover: function(evt) {
+    console.log('yo hover')
+  },
   actions: {
     someAction() {
       console.log('Clicked!');
