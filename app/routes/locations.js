@@ -21,8 +21,6 @@ export default Ember.Route.extend({
   },
 
   setupController(controller, models) {
-    controllerHere = controller 
-    modelsHere  = models
     controller.setProperties(models)
   },
   
@@ -32,6 +30,10 @@ export default Ember.Route.extend({
       this.set('isModalOpen', true)
       this.set('blurBackground', true)
     }, 
+    reloadWorldNums() {
+      console.log("Reloading nums for articles")
+      this.refresh()
+    },
     close() {
       this.set('isModalOpen', false)
       this.set('blurBackground', false)
