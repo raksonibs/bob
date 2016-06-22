@@ -6,10 +6,14 @@ export default SocketIO.extend({
   data: [],
 
   setUp() {
-  
     const socket = this.get('socketIOService').socketFor('http://localhost:3001/');
     socket.on('connect', this.onConnect, this);
     socket.on('message', this.onMessage, this);    
+  },
+
+  getSocket() {
+    const socket = this.get('socketIOService').socketFor('http://localhost:3001/');
+    return socket
   },
 
   onConnect() {
@@ -26,7 +30,6 @@ export default SocketIO.extend({
   onNewArticles(data) {
     const socket = this.get('socketIOService').socketFor('http://localhost:3001/');
     socket.send('new articles recieved on client: ' + data.data.length);
-    this.set('data', data);
   },
 
   addNewArtListener() {
