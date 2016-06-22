@@ -1,5 +1,23 @@
 <div class="activate-modals">
-  {{#each continents as |cont|}}
-    {{cont-row activateContModal=activateContModal cont-name=cont.name articles=afrArticles getArts=getArts}}
-  {{/each}}
+  
+  {{cont-row articles=afrArticles activateContModal=activateContModal cont-name="Africa"}}
+  {{cont-modal contTitle="Africa" articles=afrArticles}}
+
+  {{cont-row articles=asiaArticles activateContModal=activateContModal cont-name="Asia"}}
+  {{cont-modal contTitle="Asia" articles=asiaArticles}}
+
+  {{cont-row articles=eurArticles activateContModal=activateContModal cont-name="Europe"}}
+  {{cont-modal contTitle="Europe" articles=eurArticles}}
+
+  {{cont-row articles=oceArticles activateContModal=activateContModal cont-name="Oceania"}}
+  {{cont-modal contTitle="Oceania" articles=oceArticles}}
+
+  {{cont-row articles=namArticles activateContModal=activateContModal cont-name="North America"}}
+  {{cont-modal contTitle="North America" articles=namArticles}}
+
+  {{cont-row articles=samArticles activateContModal=activateContModal cont-name="South America"}}
+  {{cont-modal contTitle="South America" articles=samArticles}}
+
+  {{cont-row articles=antArticles activateContModal=activateContModal cont-name="Antartica"}}
+  {{cont-modal contTitle="Antartica" articles=antArticles}}
 </div>

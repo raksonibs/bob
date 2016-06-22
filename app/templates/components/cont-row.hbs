@@ -1,3 +1,6 @@
-<button onclick={{action "showArts"}}>
+<button onclick={{action "showArts" cont-name}}>
   {{cont-name}}
 </button>
+
+{{cont-modal isModalOpen=isModalOpen contTitle=cont-name articles=articles}}
+
