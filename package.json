@@ -1,7 +1,7 @@
 {
-  "name": "tell-o world",
+  "name": "telloworld",
   "version": "0.0.0",
-  "description": "Small description for tell-o world goes here",
+  "description": "Small description for telloworld goes here",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -38,6 +38,7 @@
     "ember-composability": "0.3.5",
     "ember-data": "^2.5.0",
     "ember-export-application-global": "^1.0.5",
+    "ember-font-awesome": "2.1.1",
     "ember-keyboard": "1.0.3",
     "ember-load-initializers": "^0.5.1",
     "ember-material-design-icons-shim": "0.1.8",

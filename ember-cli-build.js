@@ -7,6 +7,8 @@ module.exports = function(defaults) {
     // Add options here
   });
 
-  
+  app.import('vendor/jquery.gsap.min.js')  
+  app.import('vendor/TimelineMax.min.js')  
+  app.import('vendor/TweenMax.min.js')  
   return app.toTree();
 };

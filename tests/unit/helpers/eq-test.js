@@ -1,4 +1,4 @@
-import { eq } from 'tell-o world/helpers/eq';
+import { eq } from 'telloworld/helpers/eq';
 import { module, test } from 'qunit';
 
 module('Unit | Helper | eq');

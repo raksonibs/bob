@@ -7,3 +7,4 @@
 
 ## issues
 - svg onclick string issue with ember
+- locations should have location type which refers to actual continents, right now stringged.
