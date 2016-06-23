@@ -37,10 +37,9 @@ export default Ember.Component.extend({
     this.get('reloadWorldNums')()
     // Component.send('reload')
     // will just fade out!
-    // setTimeout(function() {
-    //   thisState.set('newData', [])
-    //   thisState.set('newArticles', false)
-    // }, 3000)
+    setTimeout(function() {
+      thisState.set('newArticles', false)
+    }, 5010)
   },
 
   willDestroyElement() {
