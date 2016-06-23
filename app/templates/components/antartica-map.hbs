@@ -128,10 +128,13 @@
           L379.137,437.982z M381.648,438.475l-0.178-0.522l-0.2,0.426L381.648,438.475z M402.372,436.902l-0.275-0.138l-0.506,0.17
           L402.372,436.902z M401.092,436.907l-0.126-0.241l-0.111-0.031L401.092,436.907z M399.708,436.393l-0.989,0.184l2.102,0.448
           L399.708,436.393z"/>
-          <text x="500" y="490" font-family="sans-serif" font-size="20px" fill="red">{{articleCount}}</text>
+          <text x="500" y="490" font-family="sans-serif" font-size="20px" fill="#ee6e73">{{articleCount}}</text>
           <ForeignObject><h3 onclick={{action "someAction"}}>Fire action on click</h3></ForeignObject>
           <ForeignObject>{{cont-modal isModalOpen=isModalOpen contTitle="Antartica" articles=articles}}</ForeignObject>
           {{#if showHoverBox}}
             <rect width="50%" x="100" height="50%" y="100" fill="rgba(117, 115, 115, 0.16)"/>
-            <text x="175" y="175" font-size="60" text-anchor="middle" fill="#fff">{{articles.firstObject.title}}</text><text x="245" y="205" font-size="30" text-anchor="middle" fill="#fff">{{articles.firstObject.story}}</text>
+          <text x="175" y="175" font-size="60" text-anchor="middle" fill="#fff">{{articles.firstObject.title}}</text><text x="245" y="205" font-size="30" text-anchor="middle" fill="#fff">{{articles.firstObject.story}}</text>
+          <image x="375" y="115" height="100px" width="100px" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href={{articles.firstObject.imageUrl}}></image>
+          <text x="175" y="275" font-size="60" text-anchor="middle" fill="#fff">{{articles.lastObject.title}}</text><text x="245" y="305" font-size="30" text-anchor="middle" fill="#fff">{{articles.lastObject.story}}</text>
+          <image xlink:href={{articles.firstObject.imageUrl}} x="375" y="215" height="100px" width="100px"/>
           {{/if}}
