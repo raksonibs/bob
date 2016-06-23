@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'borrowers',
+    modulePrefix: 'tell-o world',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

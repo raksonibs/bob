@@ -1,4 +1,4 @@
-import { eq } from 'borrowers/helpers/eq';
+import { eq } from 'tell-o world/helpers/eq';
 import { module, test } from 'qunit';
 
 module('Unit | Helper | eq');

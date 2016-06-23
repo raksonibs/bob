@@ -1,7 +1,7 @@
 {
-  "name": "borrowers",
+  "name": "tell-o world",
   "version": "0.0.0",
-  "description": "Small description for borrowers goes here",
+  "description": "Small description for tell-o world goes here",
   "private": true,
   "directories": {
     "doc": "doc",
