@@ -1,14 +1,10 @@
 <nav class="new-mess">
- {{!--  <ul style="transform: translateX(0px);" id="slide-out" class="side-nav new-mess right">
-    <li class=> Test </li>
-  </ul> --}}
   <h5>New Articles</h5>
   {{#if newArticles}}
-    <div class="new-messages">
-      {{#each newMessagesArray as |newArticle|}}
-        <p>{{newArticle.attributes.title}}</p>
-      {{/each}}
-    </div>
+    {{#each newMessagesArray as |newArticle|}}
+      <div class="missle target-{{newArticle.relationships.location.data.id}}">{{fa-icon "rocket"}}</div>
+      <p>{{newArticle.attributes.title}} - {{newArticle.relationships.location.data.id}}</p>
+    {{/each}}
   {{else}}
     <div class="loading"></div>
     <h6 class="waiting"> Waiting</h6>

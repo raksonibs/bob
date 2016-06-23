@@ -72,11 +72,11 @@ ul li {
   height: -moz-calc(100%);
   padding-bottom: 60px;
   background-color: #fff;
-  z-index: 999;
-  backface-visibility: hidden;
-  overflow-y: auto;
-  will-change: transform;
-  backface-visibility: hidden;
+  // z-index: 999;
+  // backface-visibility: hidden;
+  // overflow-y: auto;
+  // will-change: transform;
+  // backface-visibility: hidden;
   transform: translateX(-105%);
   color: black;
   text-align: center;
@@ -170,9 +170,10 @@ a.author {
 // ember-cli-materialize styles
 @import 'ember-cli-materialize';
 
-
 #world-map {
   margin: 25px 0;
+  left: -100px;
+  position: relative;
 }
 
 /* Sass variables & mixins */
@@ -276,5 +277,175 @@ button {
     right: 0;
     left: inherit;
     // top: 64px;
+  }
+}
+
+@keyframes missleAttackAfrica {
+  30% {
+    left: 35%;
+    top: 35%;
+  }
+  50% {
+    left: 30%;
+    top: 30%;
+    transform: rotate(187deg);
+  }
+  100% {
+    top: 26%;
+    left: -261%;
+  } 
+}
+
+@keyframes missleAttackOceania {
+  30% {
+    left: 35%;
+    top: 35%;
+  }
+  50% {
+    left: 30%;
+    top: 30%;
+    transform: rotate(187deg);
+  }
+  100% {
+    top: 56%;
+    left: -40%;
+  } 
+}
+
+@keyframes missleAttackAsia {
+  30% {
+    left: 35%;
+    top: 35%;
+  }
+  50% {
+    left: 30%;
+    top: 30%;
+    transform: rotate(187deg);
+  }
+  100% {
+    top: 15%;
+    left: -151%;
+  } 
+}
+
+@keyframes missleAttackEurope {
+  30% {
+    left: 35%;
+    top: 35%;
+  }
+  50% {
+    left: 30%;
+    top: 30%;
+    transform: rotate(187deg);
+  }
+  100% {
+    top: 5%;
+    left: -279%;
+  } 
+}
+
+@keyframes missleAttackNorthAmerica {
+  30% {
+    left: 35%;
+    top: 35%;
+  }
+  50% {
+    left: 30%;
+    top: 30%;
+    transform: rotate(187deg);
+  }
+  100% {
+    top: 5%;
+    left: -471%;
+  } 
+}
+
+@keyframes missleAttackSouthAmerica {
+  30% {
+    left: 35%;
+    top: 35%;
+  }
+  50% {
+    left: 30%;
+    top: 30%;
+    transform: rotate(187deg);
+  }
+  100% {
+    top: 40%;
+    left: -415%;
+  } 
+}
+
+@keyframes missleAttackAntartica {
+  30% {
+    left: 35%;
+    top: 35%;
+  }
+  50% {
+    left: 30%;
+    top: 30%;
+    transform: rotate(187deg);
+  }
+  100% {
+    top: 71%;
+    left: -294%;
+  } 
+}
+
+.missle {
+  left: 90px;
+  position: relative;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  &.target-1 {
+    left: 49%;
+    color: lightblue;   
+    animation: missleAttackNorthAmerica 9s;
+  }
+  &.target-2 {
+    left: 51%;
+    color: #ec4949;   
+    animation: missleAttackNorthAmerica 9s;
+  }
+  &.target-3 {
+    left: 52%;
+    color: #4960ec;   
+    animation: missleAttackAsia 9s;
+  }
+  &.target-4 {
+    left: 48%;
+    color: #b249ec;   
+    animation: missleAttackEurope 9s;
+  }
+  &.target-5 {
+    left: 47%;
+    color: #ec9249;   
+    animation: missleAttackNorthAmerica 9s;
+  }
+  &.target-6 {
+    left: 53%;
+    color: purple;   
+    animation: missleAttackAfrica 9s;
+  }
+  &.target-7 {
+    color: #e5ec49;   
+    animation: missleAttackAfrica 9s;
+  }
+  &.target-8 {
+    color: #612424;   
+    animation: missleAttackOceania 9s;
+  }
+  &.target-9 {
+    color: #244661;   
+    animation: missleAttackSouthAmerica 9s;
+  }
+  &.target-10 {
+    color: #4cc586;   
+    animation: missleAttackAntartica 9s;
   }
 }

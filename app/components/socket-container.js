@@ -39,7 +39,7 @@ export default Ember.Component.extend({
     // will just fade out!
     setTimeout(function() {
       thisState.set('newArticles', false)
-    }, 5010)
+    }, 10010)
   },
 
   willDestroyElement() {
