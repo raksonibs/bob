@@ -4,10 +4,12 @@
   </a>
   {{#link-to 'locations'}}Locations{{/link-to}}
   {{#link-to 'articles'}}Articles{{/link-to}}
-  {{#link-to 'favourites'}}Favourites{{/link-to}}
-  {{#link-to 'users'}}Users{{/link-to}}
+  {{!-- {{#link-to 'favourites'}}Favourites{{/link-to}} --}}
+  {{!-- {{#link-to 'users'}}Users{{/link-to}} --}}
   <a {{action 'invalidateSession'}}>Logout</a>
 {{else}}
-  Not logged in
+  {{#link-to 'login'}}Login{{/link-to}}
+  <a>Not logged in</a>
+  
 {{/if}}
 {{/md-navbar}}

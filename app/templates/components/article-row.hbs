@@ -6,10 +6,14 @@ Favourites: {{article.favourites.length}}
 {{#if isModalOpen}}
   {{#md-modal close='close' class="test-modal"}}
       <div class="modal-content">
-          <h4>Ohai there!</h4>
-          <p>Star ember-cli-materialize if you love it on 
-          <a href="https://github.com/truenorth/ember-cli-materialize">github</a>!
+          <h1>{{article.title}}</h1>
+          <h2>Favourited: {{article.favourites.length}} times</h2>
+          <h3>{{article.created_at}}</h3>
+          <p>{{article.story}}
           </p>
+          {{#if authManager.currentUser}}  
+            <button onclick={{action "favouriteBtn" article}}>Favourite!</button>
+          {{/if}}
       </div>
       <div class="modal-footer">
           <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'close'}}>

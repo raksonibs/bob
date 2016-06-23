@@ -1,1 +1,3 @@
-<button onclick={{action "favouriteBtn" article}}>Favourite!</button>
+{{#if authManager.currentUser}}  
+  <button onclick={{action "favouriteBtn" article}}>Favourite!</button>
+{{/if}}
