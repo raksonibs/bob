@@ -12,6 +12,14 @@ export default Ember.Component.extend({
       this.get('activateContModal')(this.get('articles'))
     }
   },
+  mouseEnter: function(evt) {
+    console.log('comes in')
+    this.set('showHoverBox', true)
+  },
+  mouseLeave: function(evt) {
+    console.log('comes out')
+    this.set('showHoverBox', false)
+  },
   actions: {
     someAction() {
       console.log('Clicked!');

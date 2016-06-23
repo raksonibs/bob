@@ -281,9 +281,7 @@
         <ForeignObject><h3 onclick={{action "someAction"}}>Fire action on click</h3>
         </ForeignObject>
         <ForeignObject>{{cont-modal isModalOpen=isModalOpen contTitle="Africa" articles=articles}}</ForeignObject>
-        <ForeignObject width="200px" height="200px" x="545" y="210">
-          <div class="hover-container">
-            <h1>Hover Box</h1>
-            <h3>{{articles.first.title}}</h3>
-          </div>
-        </ForeignObject>
+        {{#if showHoverBox}}
+          <rect width="50%" x="100" height="50%" y="100" fill="rgba(117, 115, 115, 0.16)"/>
+          <text x="175" y="175" font-size="60" text-anchor="middle" fill="black">{{articles.firstObject.title}}</text>
+        {{/if}}
