@@ -5,7 +5,17 @@ module.exports = function(environment) {
     modulePrefix: 'telloworld',
     environment: environment,
     baseURL: '/',
-    locationType: 'hash',
+    locationType: 'history',
+    contentSecurityPolicy: {
+              'default-src': "'none'",
+              'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+              'font-src': "'self'",
+              'connect-src': "'self' http://localhost:3000",
+              'img-src': "'self'",
+              'report-uri':"'localhost'",
+              'style-src': "'self' 'unsafe-inline'",
+              'frame-src': "'none'"
+          },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
