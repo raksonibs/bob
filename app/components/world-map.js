@@ -5,7 +5,7 @@ export default Ember.Component.extend({
 
   actions: {
     activateContModal(articles) {
-      this.get('activateContModal')(articles)
+      this.get('activateContModal')(articles);
     }
   }
 });

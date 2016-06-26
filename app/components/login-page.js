@@ -7,10 +7,10 @@ export default Ember.Component.extend({
     authenticate(){
       const { login, password } = this.getProperties('login', 'password');
       this.get('authManager').authenticate("authenticator:oauth2", login, password).then(() => {
-        alert("success")
+        console.log("success");
       }, (err) => {
-        alert('error ' + err.responseToken)
-      })
+        console.log('error ' + err.responseToken);
+      });
     }
   }
 });

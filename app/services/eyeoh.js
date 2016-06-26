@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import SocketIO from 'ember-websockets/services/socket-io'
+import SocketIO from 'ember-websockets/services/socket-io';
 
 export default SocketIO.extend({
   socketIOService: Ember.inject.service('socket-io'),
@@ -13,7 +13,7 @@ export default SocketIO.extend({
 
   getSocket() {
     const socket = this.get('socketIOService').socketFor('http://localhost:3001/');
-    return socket
+    return socket;
   },
 
   onConnect() {
@@ -38,7 +38,7 @@ export default SocketIO.extend({
     socket.on('new_articles', this.onNewArticles, this);
   },
 
-  myCustomNamespace(data) {
+  myCustomNamespace() {
     const socket = this.get('socketIOService').socketFor('http://localhost:7000/');
     socket.emit('anotherNamespace', 'some data');
   },

@@ -3,8 +3,8 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   authManager: Ember.inject.service('session'),
 
-  model(params) {
-    return this.store.findAll('article');    
+  model() {
+    return this.store.findAll('article');
   },
 
   actions: {
@@ -14,13 +14,13 @@ export default Ember.Route.extend({
     },
     favouriteBtnClick(article) {
       if (this.get('authManager').get('isAuthenticated')) {
-        let user = this.store.peekRecord('user', this.get('authManager').get('session.content.authenticated.user').id)
+        let user = this.store.peekRecord('user', this.get('authManager').get('session.content.authenticated.user').id);
         let favourite = this.store.createRecord('favourite', {
           user: user,
           article: article
-        })
+        });
  
-        favourite.save()
+        favourite.save();
       }
     }, 
     close() {

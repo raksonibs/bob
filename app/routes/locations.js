@@ -1,6 +1,5 @@
 import Ember from 'ember';
-var controllerHere;
-var modelsHere;
+
 export default Ember.Route.extend({
   socketio: Ember.inject.service('eyeoh'),
   socketIOService: Ember.inject.service('socket-io'),
@@ -21,22 +20,22 @@ export default Ember.Route.extend({
   },
 
   setupController(controller, models) {
-    controller.setProperties(models)
+    controller.setProperties(models);
   },
   
   actions: {    
-    activateContModal(articles) {
-      console.log('activating modal')
-      this.set('isModalOpen', true)
-      this.set('blurBackground', true)
+    activateContModal() {
+      console.log('activating modal');
+      this.set('isModalOpen', true);
+      this.set('blurBackground', true);
     }, 
     reloadWorldNums() {
-      console.log("Reloading nums for articles")
-      this.refresh()
+      console.log("Reloading nums for articles");
+      this.refresh();
     },
     close() {
-      this.set('isModalOpen', false)
-      this.set('blurBackground', false)
+      this.set('isModalOpen', false);
+      this.set('blurBackground', false);
     }
   }
 });

@@ -27,19 +27,19 @@ export default Ember.Component.extend({
   onNewArticles(data) {
     const socket = this.get('socketIOService').socketFor('http://localhost:3001/');
     socket.send('new articles recieved on client: ' + data.data.length);
-    this.set('dataArticles', data)
-    this.set('newArticles', true)
-    thisState = this
-    console.log("Setting stuff up again")
-    this.set('newMessagesArray', data.data)
+    this.set('dataArticles', data);
+    this.set('newArticles', true);
+    thisState = this;
+    console.log("Setting stuff up again");
+    this.set('newMessagesArray', data.data);
     // this.actions.reload()
-    console.log("reloading in socket-container")
-    this.get('reloadWorldNums')()
+    console.log("reloading in socket-container");
+    this.get('reloadWorldNums')();
     // Component.send('reload')
     // will just fade out!
     setTimeout(function() {
-      thisState.set('newArticles', false)
-    }, 10010)
+      thisState.set('newArticles', false);
+    }, 10010);
   },
 
   willDestroyElement() {
@@ -50,9 +50,9 @@ export default Ember.Component.extend({
 
   actions: {
     reload() {
-      console.log("reloading in socket-container")
+      console.log("reloading in socket-container");
       // this.get('reloadWorldNums')()
-      this.sendAction('reloadWorldNums')
+      this.sendAction('reloadWorldNums');
     }
   }
 });

@@ -5,6 +5,6 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
   authManager: Ember.inject.service('session'),
 
   model() {
-    return this.store.findAll('favourite')
+    return this.store.findAll('favourite');
   }
 });
