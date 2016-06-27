@@ -1,10 +1,9 @@
-##to do
+## to do
 - redis
-- better display for user account
-- hover over for images
+- docker
+- gamble with animations
 - minitests
-- docker deplo/aws
+- deploy
+- model off kick
 
 ## issues
-- svg onclick string issue with ember
-- locations should have location type which refers to actual continents, right now stringged.
